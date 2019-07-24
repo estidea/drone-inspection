@@ -93,6 +93,7 @@ if(isMobileDevice()!= true) {
     tlWave = new TimelineMax({repeat:-1}),
     tlDrone = new TimelineMax({repeat:-1}),
     tlHead = new TimelineMax({repeat:-1}),
+    tlDroneImg = new TimelineMax({repeat:-1}),
     tlArm = new TimelineMax({repeat:-1});
 
 var shadow1 = $('#shadow-1'),
@@ -105,6 +106,7 @@ var shadow1 = $('#shadow-1'),
     arm = $('#svg-arm'),
     drone = $('#svg-drone'),
     head = $('#svg-head'),
+    droneImg = $('#drone-img'),
     width = window.outerWidth;
 
 
@@ -158,3 +160,7 @@ tlHead
     .fromTo(head,4,{x:0,ease: Power1.easeOut},{x:-2,ease: Power1.easeOut})
     .fromTo(head,4,{x:-2,ease: Power1.easeOut},{x:0,ease: Power1.easeOut})
 }
+
+tlDroneImg
+    .fromTo(droneImg,2,{y:0,ease: Power1.easeOut},{y:10,ease: Power1.easeOut})
+    .fromTo(droneImg,2,{y:10,ease: Power1.easeOut},{y:0,ease: Power1.easeOut})
