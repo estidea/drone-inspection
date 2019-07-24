@@ -4,14 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
  */
 
- @font-face {
-  font-family: 'corsagrotesk-thin';
-  src: url('../fonts/corsagrotesk-thin-webfont.woff') format('woff2'),
-       url('../fonts/corsagrotesk-thin-webfont.woff2') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   color:white;
 }
