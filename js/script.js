@@ -3,6 +3,31 @@ jQuery(function($){
     $(".input-phone").mask("+38 (099) 999-9999");
  });
 
+ /* Scroll top link */
+jQuery(document).ready(function($) {
+
+    var visible = false;
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function() {
+      var scrollTop = $(this).scrollTop();
+      if (!visible && scrollTop > 1000) {
+        $(".scrollToTop").fadeIn();
+        visible = true;
+      } else if (visible && scrollTop <= 1000) {
+        $(".scrollToTop").fadeOut();
+        visible = false;
+      }
+    });
+  
+    //Click event to scroll to top
+    $(".scrollToTop").click(function() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 500);
+      return false;
+    });
+  
+  });
 
 /* Reviews scroller */
 window.onload = function() {
@@ -159,8 +184,9 @@ tlHead
     .fromTo(head,4,{x:2,ease: Power1.easeOut},{x:0,ease: Power1.easeOut})
     .fromTo(head,4,{x:0,ease: Power1.easeOut},{x:-2,ease: Power1.easeOut})
     .fromTo(head,4,{x:-2,ease: Power1.easeOut},{x:0,ease: Power1.easeOut})
-}
+
 
 tlDroneImg
     .fromTo(droneImg,2,{y:0,ease: Power1.easeOut},{y:10,ease: Power1.easeOut})
     .fromTo(droneImg,2,{y:10,ease: Power1.easeOut},{y:0,ease: Power1.easeOut})
+}
